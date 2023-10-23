@@ -6,4 +6,4 @@ const router = express.Router()
 router.post('/user', insertUser)
 router.get('/user/:uid', userDetails)
 
-export default router
+export default router   

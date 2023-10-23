@@ -3,6 +3,8 @@ import dotenv from 'dotenv'
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url';
+import {getFirestore} from 'firebase-admin/firestore'
+
 
 dotenv.config()
 
@@ -27,4 +29,6 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccountKey)
 });
 
-export default admin
+const db = getFirestore()
+
+export default db

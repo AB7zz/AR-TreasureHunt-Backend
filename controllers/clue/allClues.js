@@ -12,7 +12,7 @@ const allClues = async(req, res) => {
         return res.status(200).json({success: 1, result})
     } catch (error) {
         console.log(error)
-        return res.json({success: 0, message: 'Some error occurred'})
+        return res.json({success: -1, message: 'Some error occurred'})
     }
 }
 

@@ -7,6 +7,6 @@ const router = express.Router()
 
 router.get('/coupon', allCoupons)
 router.post('/coupon', insertCoupon)
-router.delete('/coupon/:cid', deleteCoupon)
+router.delete('/coupon/:coupon', deleteCoupon)
 
 export default router

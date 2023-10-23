@@ -15,7 +15,8 @@ const insertUser = async(req, res) => {
         const result = await userRef.set(data)
         return res.status(200).json({success: 1, message: 'User inserted', result})
     } catch (error) {
-        
+        console.log(error)
+        return res.json({success: 0, message: 'Some error occurred'})
     }
 }
 

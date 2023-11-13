@@ -10,7 +10,9 @@ const insertUser = async(req, res) => {
         }
         const data = {
             id: uid,
-            name: req.body.name,
+            name: req.body.teamLeaderName,
+            email: req.body.teamLeaderEmail,
+            teamName: req.body.teamName,
             level: 0,
             coupons: []
         }

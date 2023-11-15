@@ -4,15 +4,10 @@ const insertClue = async(req, res) => {
     try {
         const clueRef = db.collection('clues').doc(req.body.level)
         const clue = await clueRef.get()
-        let clues
-        if (clue.exists) {
-            clues = clue.data().clues
-        }else{
-            clues = []
-        }
-        clues.push(req.body.clue)
+        
         const data = {
-            clues
+            clue: req.body.clue,
+            hint: req.body.hint
         }
 
         await clueRef.set(data)

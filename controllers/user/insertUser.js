@@ -14,7 +14,8 @@ const insertUser = async(req, res) => {
             email: req.body.teamLeaderEmail,
             teamName: req.body.teamName,
             level: 0,
-            coupons: []
+            coupons: [],
+            timestamps: []
         }
         
         await userRef.set(data)

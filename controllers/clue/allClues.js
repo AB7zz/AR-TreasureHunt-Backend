@@ -9,7 +9,7 @@ const allClues = async(req, res) => {
         }
         const result = []
         clues.forEach(doc => {
-            result.push(doc.data().clues)
+            result.push(doc.data())
         })
         return res.status(200).json({success: 1, result})
     } catch (error) {

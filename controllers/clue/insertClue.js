@@ -3,7 +3,6 @@ import db from '../../config/firebase-config.js'
 const insertClue = async(req, res) => {
     try {
         const clueRef = db.collection('clues').doc(req.body.level)
-        const clue = await clueRef.get()
         
         const data = {
             clue: req.body.clue,

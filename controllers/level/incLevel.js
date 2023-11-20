@@ -15,11 +15,12 @@ const incLevel = async(req, res) => {
         }else{
             timestamps = [req.body.timestamp]
         }
+        console.log(timestamps)
         const data = {
             level: user.data().level + 1,
             timestamps
         }
-        const result = await userRef.update(data)
+        await userRef.update(data)
         return res.status(200).json({success: 1, message: 'Level incremented'})
     } catch (error) {
         return res.json({success: -1, message: 'Some error occurred'})

@@ -14,6 +14,10 @@ const fetchLocation = async(req, res) => {
         const FOUR_X_2 = process.env.FOUR_X_2
         const FIVE_X_1 = process.env.FIVE_X_1
         const FIVE_X_2 = process.env.FIVE_X_2
+        const SIX_X_1 = process.env.SIX_X_1
+        const SIX_X_2 = process.env.SIX_X_2
+        const SEVEN_X_1 = process.env.SEVEN_X_1
+        const SEVEN_X_2 = process.env.SEVEN_X_2
 
         const locations = [
             {
@@ -40,6 +44,16 @@ const fetchLocation = async(req, res) => {
                 level: '5',
                 x1: FIVE_X_1,
                 x2: FIVE_X_2
+            },
+            {
+                level: '6',
+                x1: SIX_X_1,
+                x2: SIX_X_2
+            },
+            {
+                level: '7',
+                x1: SEVEN_X_1,
+                x2: SEVEN_X_2
             }
         ]
         // console.log("dkjfkjbe")

@@ -2,7 +2,7 @@ import db from '../../config/firebase-config.js'
 
 const insertUser = async(req, res) => {
     try {
-        const uid = req.headers.uid
+        const uid = req.headers.authorization
         const userRef = db.collection('users').doc(uid)
         const user = await userRef.get()
         if (user.exists) {

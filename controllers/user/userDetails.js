@@ -8,7 +8,6 @@ const userDetails = async(req, res) => {
             return res.status(404).json({success: 0, message: 'User not found'})
         }
         const result = user.data()
-        console.log(result)
         return res.status(200).json({success: 1, result})
     } catch (error) {
         console.log(error)

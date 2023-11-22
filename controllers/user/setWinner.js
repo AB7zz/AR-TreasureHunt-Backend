@@ -5,7 +5,7 @@ const setWinner = async(req, res) => {
         if (!userGet.exists) {
             return res.status(404).json({success: 0, message: 'User not found'})
         }
-        await userRef.update({winner: true})
+        await userRef.set({winner: true})
         return res.status(200).json({success: 1, message: 'Winner set'})
     } catch (error) {
         console.log(error)

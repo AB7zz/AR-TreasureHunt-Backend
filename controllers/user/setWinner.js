@@ -1,3 +1,5 @@
+import db from '../../config/firebase-config.js'
+
 const setWinner = async(req, res) => {
     try {
         const userRef = db.collection('users').doc(req.headers.authorization)
@@ -5,7 +7,7 @@ const setWinner = async(req, res) => {
         if (!userGet.exists) {
             return res.status(404).json({success: 0, message: 'User not found'})
         }
-        await userRef.set({winner: true})
+        await userRef.update({winner: true})
         return res.status(200).json({success: 1, message: 'Winner set'})
     } catch (error) {
         console.log(error)
